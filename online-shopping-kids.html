@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids Dresses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { nunito: ['Nunito', 'sans-serif'] },
+                    colors: {
+                        rose:    { DEFAULT: '#E8536A', light: '#fde8ec' },
+                        sky:     { soft: '#d6eef8', DEFAULT: '#63b8e0' },
+                        cream:   '#fdf6f0',
+                        peach:   '#fce9dc',
+                        mint:    { DEFAULT: '#c8ecd4', dark: '#4caf7d' },
+                        yellow:  { soft: '#fff9e0', star: '#f5c842' },
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-nunito bg-gray-50 text-gray-800">
+
+<!-- ─── HEADER ─────────────────────────────────────────────── -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-pink-50 shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-8">
+
+        <!-- ── Logo ── -->
+        <a href="#" class="flex items-center gap-2.5 shrink-0 group">
+            <!-- Calendar-style icon -->
+            <div class="w-9 h-9 bg-pink-500 rounded-xl flex flex-col overflow-hidden shadow-md group-hover:bg-pink-600 transition-colors duration-200">
+                <!-- top bar with rings -->
+                <div class="bg-pink-600 flex items-center justify-center gap-1.5 pt-1 pb-0.5">
+                    <span class="w-1 h-2 bg-white rounded-full opacity-90"></span>
+                    <span class="w-1 h-2 bg-white rounded-full opacity-90"></span>
+                    <span class="w-1 h-2 bg-white rounded-full opacity-90"></span>
+                </div>
+                <!-- calendar body with a star -->
+                <div class="flex-1 bg-white flex items-center justify-center">
+                    <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2L12 14l-4.8 2.5.9-5.2L4.3 7.6l5.3-.8z"/>
+                    </svg>
+                </div>
+            </div>
+            <!-- Wordmark -->
+            <span class="text-lg font-black tracking-tight leading-none">
+        <span class="text-slate-800">Kids</span>
+        <span class="text-pink-500"> Dresses</span>
+      </span>
+        </a>
+
+        <!-- ── Search bar (center) ── -->
+        <div class="hidden md:flex flex-1 max-w-sm mx-4">
+            <div class="relative w-full group">
+                <!-- Search icon -->
+                <span class="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400 group-focus-within:text-pink-500 transition-colors duration-200">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"/>
+            <path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+          </svg>
+        </span>
+                <input
+                        type="text"
+                        placeholder="Search dresses, styles…"
+                        class="w-full pl-10 pr-10 py-2.5 text-sm bg-white border border-slate-200 rounded-xl text-slate-700 placeholder-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-pink-400 focus:border-transparent hover:border-pink-300 transition-all duration-200"
+                />
+                <!-- kbd hint -->
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 pointer-events-none">
+          <kbd class="hidden group-focus-within:inline-flex items-center px-1.5 py-0.5 text-xs font-medium text-slate-400 bg-slate-100 border border-slate-200 rounded">⌘K</kbd>
+        </span>
+            </div>
+        </div>
+
+        <!-- ── Nav links ── -->
+        <nav class="hidden md:flex items-center gap-1">
+            <a href="#" class="relative px-4 py-2 text-sm font-bold text-slate-800 rounded-lg hover:bg-pink-50 hover:text-pink-500 transition-all duration-200 after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:rounded-full after:bg-pink-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200">Home</a>
+            <a href="#" class="relative px-4 py-2 text-sm font-semibold text-slate-500 rounded-lg hover:bg-pink-50 hover:text-pink-500 transition-all duration-200 after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:rounded-full after:bg-pink-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200">Shop</a>
+            <a href="#" class="relative px-4 py-2 text-sm font-semibold text-slate-500 rounded-lg hover:bg-pink-50 hover:text-pink-500 transition-all duration-200 after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:rounded-full after:bg-pink-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200">About</a>
+            <a href="#" class="relative px-4 py-2 text-sm font-semibold text-slate-500 rounded-lg hover:bg-pink-50 hover:text-pink-500 transition-all duration-200 after:absolute after:bottom-1 after:left-4 after:right-4 after:h-0.5 after:rounded-full after:bg-pink-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200">Contact</a>
+        </nav>
+
+        <!-- ── Right actions ── -->
+        <div class="flex items-center gap-3">
+
+            <!-- Cart icon -->
+            <button class="relative p-2 text-slate-500 hover:text-pink-500 hover:bg-pink-50 rounded-xl transition-all duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 01-8 0"/>
+                </svg>
+                <span class="absolute top-1 right-1 w-2 h-2 bg-pink-500 rounded-full ring-2 ring-slate-100"></span>
+            </button>
+
+            <!-- Divider -->
+            <div class="hidden md:block h-6 w-px bg-slate-200"></div>
+
+            <!-- Sign In / Sign Up -->
+            <a href="#" class="hidden md:flex items-center gap-2 px-5 py-2 bg-pink-500 text-white text-sm font-bold rounded-xl shadow-sm shadow-pink-200 hover:bg-pink-600 hover:shadow-md hover:shadow-pink-200 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+                Sign In / Sign Up
+            </a>
+
+            <!-- Mobile hamburger -->
+            <button class="md:hidden p-2 text-slate-500 hover:text-pink-500 hover:bg-pink-50 rounded-xl transition-all duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- ─── HERO ─────────────────────────────────────────────── -->
+    <section class="relative bg-gradient-to-b from-sky-100 via-pink-50 to-white overflow-hidden min-h-[65vh] flex flex-col">
+
+        <div class="relative flex-1 flex flex-col md:flex-row items-center justify-between px-6 pt-16 pb-2 text-center md:text-left z-10 gap-2">
+
+            <!-- Left Column -->
+            <div class="flex-1 flex flex-col items-center md:items-start justify-center max-w-lg pl-16">
+                  <span class="inline-flex items-center gap-2 bg-white border border-pink-100 text-pink-500 text-xs font-bold px-4 py-1.5 rounded-full shadow-sm mb-4 uppercase">
+                    New Spring Collection
+                  </span>
+
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 leading-tight mb-5">
+                    Adorable Outfits for Kids
+                </h1>
+
+                <p class="text-slate-500 text-base md:text-lg font-semibold mb-6 leading-relaxed">
+                    Discover the cutest boys’ & girls’ dresses and outfits.
+                </p>
+
+                <div class="flex gap-4">
+                    <a href="#" class="bg-pink-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-pink-600 transition">
+                        Shop Now
+                    </a>
+                    <a href="#" class="border border-slate-300 text-slate-700 px-6 py-3 rounded-xl font-bold hover:text-pink-500 transition">
+                        View Collections
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column with Images -->
+            <div class="flex-1 flex flex-col sm:flex-row items-center justify-center gap-6 w-full">
+
+                <!-- Boy Image -->
+                <div class="w-52 sm:w-60 aspect-[3/4] rounded-3xl overflow-hidden shadow-lg">
+                    <img
+                            src="https://plus.unsplash.com/premium_photo-1723575737806-ecd7f74bf3a1?q=80&w=1008&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Boy wearing stylish kids outfit"
+                            class="w-full h-full object-cover"
+                    />
+                </div>
+
+                <!-- Girl Image -->
+                <div class="w-52 sm:w-60 aspect-[3/4] rounded-3xl overflow-hidden shadow-lg">
+                    <img
+                            src="https://images.unsplash.com/photo-1653686932978-c8003098addc?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Girl in adorable dress"
+                            class="w-full h-full object-cover"
+                    />
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Bottom wave divider -->
+        <div class="w-full pointer-events-none -mb-1">
+            <svg viewBox="0 0 1440 60" class="w-full h-2 fill-white" preserveAspectRatio="none">
+                <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z"/>
+            </svg>
+        </div>
+
+    </section>
+
+    <!-- ─── SHOP BY CATEGORY ──────────────────────────────────── -->
+    <section class="py-12 bg-white-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-black text-center text-gray-800 mb-10">Shop by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <!-- Boys -->
+                <a href="#" class="group flex flex-col items-center rounded-2xl border border-sky/30 bg-sky-soft p-0 hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden">
+                    <div class="w-full h-48 sm:h-60 overflow-hidden">
+                        <img
+                                src="https://images.unsplash.com/photo-1686226739327-e13725056720?q=80&w=1033&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Boys clothing"
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                    </div>
+                    <span class="font-bold text-gray-700 text-base py-3 text-center w-full bg-white">Boys</span>
+                </a>
+
+                <!-- Girls -->
+                <a href="#" class="group flex flex-col items-center rounded-2xl border border-rose/20 bg-rose-light p-0 hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden">
+                    <div class="w-full h-48 sm:h-60 overflow-hidden">
+                        <img
+                                src="https://images.unsplash.com/photo-1658654590068-13118c290462?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Girls clothing"
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                    </div>
+                    <span class="font-bold text-gray-700 text-base py-3 text-center w-full bg-white">Girls</span>
+                </a>
+
+                <!-- Infants -->
+                <a href="#" class="group flex flex-col items-center rounded-2xl border border-yellow-200 bg-yellow-soft p-0 hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden">
+                    <div class="w-full h-48 sm:h-60 overflow-hidden">
+                        <img
+                                src="https://plus.unsplash.com/premium_photo-1682092981825-dade225707e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Infants clothing"
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                    </div>
+                    <span class="font-bold text-gray-700 text-base py-3 text-center w-full bg-white">Infants</span>
+                </a>
+
+                <!-- Accessories -->
+                <a href="#" class="group flex flex-col items-center rounded-2xl border border-mint/40 bg-mint/20 p-0 hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden">
+                    <div class="w-full h-48 sm:h-60 overflow-hidden">
+                        <img
+                                src="https://plus.unsplash.com/premium_photo-1723649902727-d4ef19ab5f34?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Kids accessories"
+                                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                    </div>
+                    <span class="font-bold text-gray-700 text-base py-3 text-center w-full bg-white">Accessories</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products / Best Sellers -->
+    <section class="py-12 bg-white-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-gray-800 text-center mb-12">
+                Featured Products
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+                    <img
+                            src="https://images.unsplash.com/photo-1764211442513-7708ae6b535f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Boy Outfit"
+                            class="w-full h-64 object-cover"
+                    />
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800 mb-1">Boys Summer Outfit</h3>
+                        <p class="text-sm text-gray-500 mb-2">Ages 4-6</p>
+                        <span class="text-pink-500 font-bold text-lg">SEK 129.99</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+                    <img
+                            src="https://images.unsplash.com/photo-1673636157874-0516c924a949?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Girl Outfit"
+                            class="w-full h-64 object-cover"
+                    />
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800 mb-1">Girls Party Dress</h3>
+                        <p class="text-sm text-gray-500 mb-2">Ages 3-5</p>
+                        <span class="text-pink-500 font-bold text-lg">SEK 199.99</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+                    <img
+                            src="https://images.unsplash.com/photo-1626397537490-a6cca726bc9b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Infant Outfit"
+                            class="w-full h-64 object-cover"
+                    />
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800 mb-1">Infant Onesie</h3>
+                        <p class="text-sm text-gray-500 mb-2">0-12 Months</p>
+                        <span class="text-pink-500 font-bold text-lg">SEK 149.99</span>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+                    <img
+                            src="https://images.unsplash.com/photo-1597578913868-e95dbd10a8ed?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Kids Accessories"
+                            class="w-full h-64 object-cover"
+                    />
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-800 mb-1">Kids Accessories Pack</h3>
+                        <p class="text-sm text-gray-500 mb-2">Hats & Sunglasses</p>
+                        <span class="text-pink-500 font-bold text-lg">SEK 49.99</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── WHY SHOP WITH US ──────────────────────────────────── -->
+    <section class="py-12 bg-white-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-black text-center text-gray-800 mb-12">Why Shop With Us?</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+                <!-- Free Shipping -->
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-20 h-20 bg-yellow-soft rounded-full border-2 border-yellow-200 flex items-center justify-center">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none">
+                            <rect x="4" y="14" width="22" height="18" rx="3" fill="#fde68a"/>
+                            <rect x="26" y="20" width="10" height="12" rx="2" fill="#fbbf24"/>
+                            <polygon points="26,20 36,20 33,14 26,14" fill="#f59e0b"/>
+                            <circle cx="10" cy="32" r="3" fill="#6b7280"/>
+                            <circle cx="28" cy="32" r="3" fill="#6b7280"/>
+                            <path d="M8 18 L8 14 Q12 10 16 14" stroke="#f59e0b" stroke-width="1.5" fill="none"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-800">Free Shipping</p>
+                        <p class="text-sm text-gray-500">On all orders</p>
+                    </div>
+                </div>
+
+                <!-- 24/7 Support -->
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-20 h-20 bg-rose-light rounded-full border-2 border-rose/20 flex items-center justify-center">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="18" r="10" fill="#fcd9b0"/>
+                            <circle cx="15" cy="16" r="1.5" fill="#7a4a2a"/>
+                            <circle cx="25" cy="16" r="1.5" fill="#7a4a2a"/>
+                            <path d="M16 22 Q20 26 24 22" stroke="#7a4a2a" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                            <path d="M10 16 Q8 12 10 8 Q10 6 12 8" stroke="#f9a8c9" stroke-width="2" fill="none"/>
+                            <path d="M30 16 Q32 12 30 8 Q30 6 28 8" stroke="#f9a8c9" stroke-width="2" fill="none"/>
+                            <ellipse cx="10" cy="17" rx="3" ry="4" fill="#f9a8c9"/>
+                            <ellipse cx="30" cy="17" rx="3" ry="4" fill="#f9a8c9"/>
+                            <rect x="16" y="28" width="8" height="6" rx="2" fill="#fcd9b0"/>
+                            <rect x="10" y="34" width="20" height="4" rx="2" fill="#f9a8c9"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-800">24/7 Support</p>
+                        <p class="text-sm text-gray-500">Always here to help</p>
+                    </div>
+                </div>
+
+                <!-- Secure Payment -->
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-20 h-20 bg-sky-soft rounded-full border-2 border-sky/30 flex items-center justify-center">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 4 L34 10 L34 22 Q34 32 20 38 Q6 32 6 22 L6 10 Z" fill="#bfdbfe"/>
+                            <path d="M20 8 L30 13 L30 22 Q30 30 20 34 Q10 30 10 22 L10 13 Z" fill="#93c5fd"/>
+                            <path d="M14 21 L18 25 L27 16" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- duck -->
+                            <circle cx="32" cy="32" r="5" fill="#fde68a"/>
+                            <circle cx="34" cy="30" r="3" fill="#fde68a"/>
+                            <polygon points="36,30 40,31 36,32" fill="#f59e0b"/>
+                            <circle cx="35" cy="29" r="0.8" fill="#1f2937"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-800">Secure Payment</p>
+                        <p class="text-sm text-gray-500">Safe and reliable</p>
+                    </div>
+                </div>
+
+                <!-- Easy Returns -->
+                <div class="flex flex-col items-center gap-3">
+                    <div class="w-20 h-20 bg-mint/30 rounded-full border-2 border-mint flex items-center justify-center">
+                        <svg class="w-10 h-10" viewBox="0 0 40 40" fill="none">
+                            <rect x="10" y="16" width="22" height="18" rx="3" fill="#d4b896"/>
+                            <rect x="14" y="10" width="12" height="8" rx="2" fill="#c8956c" opacity="0.7"/>
+                            <path d="M30 8 Q36 14 30 20" stroke="#4caf7d" stroke-width="2.5" stroke-linecap="round" fill="none" marker-end="url(#arr)"/>
+                            <path d="M32 8 L26 8 L26 14" stroke="#4caf7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-bold text-gray-800">Easy Returns</p>
+                        <p class="text-sm text-gray-500">Hassle free returns</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Social Proof -->
+    <section class="py-12 bg-white-50">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-12">
+                What Parents Are Saying
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=80&auto=format&fit=crop"
+                             alt="Parent"
+                             class="w-12 h-12 rounded-full object-cover"/>
+                        <div class="text-left">
+                            <p class="font-bold text-gray-800">Sophia R.</p>
+                            <div class="flex text-yellow-400">
+                                ★★★★☆
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm">"My kids love these outfits! Super soft fabrics and fast delivery."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=80&auto=format&fit=crop"
+                             alt="Parent"
+                             class="w-12 h-12 rounded-full object-cover"/>
+                        <div class="text-left">
+                            <p class="font-bold text-gray-800">Michael T.</p>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm">"Beautiful collection, excellent customer service, will shop again."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow hover:shadow-lg transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=80&auto=format&fit=crop"
+                             alt="Parent"
+                             class="w-12 h-12 rounded-full object-cover"/>
+                        <div class="text-left">
+                            <p class="font-bold text-gray-800">Emma L.</p>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm">"Cute and comfortable clothes for my toddlers. Highly recommend!"</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ─── FOOTER ────────────────────────────────────────────── -->
+<footer class="bg-pink-50 border-t border-gray-100 pt-12 pb-6">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+
+            <!-- Customer Service -->
+            <div>
+                <h3 class="font-black text-gray-800 mb-4 text-sm uppercase tracking-wide">Customer Service</h3>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="#" class="hover:text-rose transition-colors">FAQ</a></li>
+                    <li><a href="#" class="hover:text-rose transition-colors">Shipping &amp; Returns</a></li>
+                    <li><a href="#" class="hover:text-rose transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="font-black text-gray-800 mb-4 text-sm uppercase tracking-wide">Quick Links</h3>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="#" class="hover:text-rose transition-colors">About Us</a></li>
+                    <li><a href="#" class="hover:text-rose transition-colors">Shop</a></li>
+                    <li><a href="#" class="hover:text-rose transition-colors">Blog</a></li>
+                    <li><a href="#" class="hover:text-rose transition-colors">Review</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div>
+                <h3 class="font-black text-gray-800 mb-4 text-sm uppercase tracking-wide">Follow Us</h3>
+                <div class="flex gap-3">
+                    <!-- Facebook -->
+                    <a href="#" class="w-9 h-9 bg-blue-100 hover:bg-blue-200 rounded-full flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" class="w-9 h-9 bg-pink-100 hover:bg-pink-200 rounded-full flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4 text-pink-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <!-- Twitter/X -->
+                    <a href="#" class="w-9 h-9 bg-sky-soft hover:bg-sky/30 rounded-full flex items-center justify-center transition-colors">
+                        <svg class="w-4 h-4 text-sky" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="font-black text-gray-800 mb-4 text-sm uppercase tracking-wide">Newsletter</h3>
+                <p class="text-sm text-gray-500 mb-3">Enter your email address</p>
+                <div class="flex gap-2">
+                    <input type="email" placeholder="Enter your email" class="flex-1 min-w-0 border border-gray-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-rose/40 bg-gray-50" />
+                    <button class="bg-pink-500 text-white text-xs font-bold px-4 py-2 rounded-xl hover:bg-rose/90 transition-colors shrink-0">Subscribe</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="flex justify-between border-t border-gray-100 pt-6">
+            <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-400 mb-3">
+                <a href="#" class="hover:text-rose transition-colors">Parents</a>
+                <span class="text-gray-300">●</span>
+                <a href="#" class="hover:text-rose transition-colors">Educate Your Kids</a>
+                <span class="text-gray-300">●</span>
+                <a href="#" class="hover:text-rose transition-colors">Parenting</a>
+                <span class="text-gray-300">●</span>
+                <a href="#" class="hover:text-rose transition-colors">Community</a>
+            </div>
+            <p class="text-center text-xs text-gray-400">© 2024 Kids Dresses. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
